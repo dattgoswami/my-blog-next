@@ -1,34 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Blog Posts Next.js App
+
+This is a Blog Posts web application built using [Next.js](https://nextjs.org/)
+It is a simple Next.js application that fetches and displays blog posts from the Hatchways API based on the selected tag. It allows users to sort the blog posts based on their preferences.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Before running the application, make sure you have [Node.js](https://nodejs.org/) installed on your system.
+
+### Installation
+
+1. Clone this repository to your local machine.
+
+2. Navigate to the project directory:
+
+```bash
+cd my-blog-next
+```
+
+3. Install the required dependencies:
+
+```bash
+npm install
+```
+
+### Running the Development Server
+
+To start the development server and run the application locally, use the following command:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will launch the application at [http://localhost:3000/](http://localhost:3000/) in your default web browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- View and search blog posts by tags.
+- Sort blog posts by ID, Likes, Reads, or Popularity in ascending or descending order.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+The project has the following structure:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+├── pages
+│   └── index.tsx
+├── components
+│   └── BlogPost.tsx
+├── types
+│   └── post.ts
+├── package.json
+├── package-lock.json (or yarn.lock if using Yarn)
+└── ...
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `pages/index.tsx` is the main component that makes up the blog posts app's UI.
+- `components/BlogPost.tsx` is a reusable component responsible for rendering individual blog posts.
+- `types/post.ts` contains the interface definition for the `Post` object used in the application.
 
-## Deploy on Vercel
+## API Integration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The application fetches blog posts data from the [Hatchways Blog API](https://api.hatchways.io/assessment/blog/posts) using the `axios` library.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing
+
+We welcome contributions to this project. If you find any issues or have improvements to suggest, feel free to open a new issue or submit a pull request.
