@@ -66,4 +66,4 @@ The application fetches blog posts data from the [Hatchways Blog API](https://ap
 
 ## Contributing
 
-We welcome contributions to this project. If you find any issues or have improvements to suggest, feel free to open a new issue or submit a pull request.
+If you find any issues or have improvements to suggest, feel free to open a new issue or submit a pull request.
